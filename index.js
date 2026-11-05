@@ -4,10 +4,10 @@ const listaMusicas = document.querySelector('#lista-musicas')
 
 async function buscarMusicas() {
     
-    const resposta = await fetch(urlBackend);
+    const resposta = await fetch(urlBackend)
     
    
-    const musicas = await resposta.json();
+    const musicas = await resposta.json()
     
     
     musicas.forEach((musica) => {
@@ -23,9 +23,9 @@ async function buscarMusicas() {
                 
                 <a href="editar.html?id=${musica.id}">Editar</a>
             </div>
-        `;
-    });
+        `
+    })
 }
 
-buscarMusicas();
+buscarMusicas()
 
