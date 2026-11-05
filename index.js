@@ -13,7 +13,7 @@ async function buscarMusicas() {
     musicas.forEach((musica) => {
        
         listaMusicas.innerHTML += `
-            <div class="card">
+            <div class="musica">
                 <h3>${musica.titulo}</h3>
                 <p>Artista: ${musica.artista}</p>
                 <p>Gênero: ${musica.genero}</p>
@@ -21,7 +21,9 @@ async function buscarMusicas() {
                 <p>Duração: ${musica.duracao}</p>
                 
                 
-                <a href="editar.html?id=${musica.id}">Editar</a>
+            <div class="acoes">
+            <a class="editar" href="editar.html?id=${musica.id}">Editar</a>
+            </div>
             </div>
         `
     })
