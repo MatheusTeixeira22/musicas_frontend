@@ -1,6 +1,6 @@
 const urlBackend = "http://localhost:3000"
 
-const listaMusicas = document.querySelector('#lista-musicas')
+const listaMusicas = document.getElementById("lista-musicas")
 
 async function buscarMusicas() {
     
@@ -11,23 +11,18 @@ async function buscarMusicas() {
     
     
     musicas.forEach((musica) => {
-       
         listaMusicas.innerHTML += `
-            <div class="musica">
-                <h3>${musica.titulo}</h3>
-                <p>Artista: ${musica.artista}</p>
-                <p>Gênero: ${musica.genero}</p>
-                <p>Ano: ${musica.ano}</p>
-                <p>Duração: ${musica.duracao}</p>
-                
-                
-            <div class="acoes">
-            <a class="editar" href="editar.html?id=${musica.id}">Editar</a>
-            </div>
-            </div>
+            <article class="musica">
+                <h2>${musica.titulo}</h2>
+                <p class="artista">${musica.artista}</p>
+                <p class="detalhes">${musica.genero} | ${musica.ano} | ${musica.duracao} min</p>
+                <div class="acoes">
+                    <a class="editar" href="editar.html?id=${musica.id}">Editar</a>
+                    <button class="apagar">Apagar</button>
+                </div>
+            </article>
         `
     })
 }
 
 buscarMusicas()
-

@@ -45,7 +45,7 @@ main {
     margin: 0 auto;
 }
 
-#listaMusicas {
+#lista-musicas {
     display: flex;
     flex-direction: column;
     gap: 14px;
